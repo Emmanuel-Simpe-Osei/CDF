@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    <title>Community Digital Fair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pluto-purple': '#353450', /* updated */
+                        'pluto-teal': '#36E0B4',   /* updated */
+                        'pluto-light': '#f8f8f8',  /* unchanged */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lazy.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+
+<body class="bg-white">
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-gradient-to-r from-pluto-purple/90 to-pluto-purple/70 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('./asset/herobg.jpg')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
+      
+        <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+          <div class="flex flex-col items-center space-y-3">
+            <img src="./asset/homewrit2.png" alt="Logo" class="w-[350px] md:w-[600px] mx-auto">
+            <p class="text-lg md:text-2xl text-pluto-teal max-w-2xl">Igniting Tech Curiosity</p>
+            <a href="#donate">
+              <button class="bg-pluto-teal text-pluto-purple font-bold px-8 py-3 rounded-full hover:bg-opacity-90 transition shadow-lg">
+                Support Our Mission
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+    <!-- About Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-pluto-purple mb-8 text-center">This is what CDF is about</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="mb-6 text-lg text-gray-700">
+                    In an age where technology drives opportunity, millions of young minds in Ghana's underserved communities remain disconnected from the digital revolution. Without exposure to digital tools, they risk being left behind in an ever-evolving world.
+                </p>
+                <div class="bg-pluto-teal/10 p-6 rounded-lg border-l-4 border-pluto-teal">
+                    <p class="text-pluto-purple">
+                        The Community Digital Fair (CDF) is here to change that.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Optimized images with lazy loading -->
+                <img data-src="./asset/communityImg.jpg" alt="Community" 
+                     class="rounded-lg shadow-md h-48 w-full object-cover lazy"
+                     loading="lazy" width="640" height="427">
+                <img data-src="./asset/images/boys.jpg" alt="Tech" 
+                     class="rounded-lg shadow-md h-48 w-full object-cover border-2 border-pluto-teal lazy"
+                     loading="lazy" width="640" height="427">
+                <img data-src="./asset/twoBoys.jpg" alt="Learning" 
+                     class="rounded-lg shadow-md h-48 w-full object-cover lazy"
+                     loading="lazy" width="640" height="427">
+                <img data-src="./asset/images/drone-8369734_1280.jpg" alt="Tools" 
+                     class="rounded-lg shadow-md h-48 w-full object-cover lazy"
+                     loading="lazy" width="640" height="427">
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-16 px-4 bg-pluto-light">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-pluto-purple mb-12 text-center">The Challenge</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-pluto-purple">
+                        <h3 class="text-xl font-bold mb-2 text-pluto-purple">Access Inequality</h3>
+                        <p class="text-gray-600">Only 29% of youth in deprived areas have access to basic digital tools.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-pluto-teal">
+                        <h3 class="text-xl font-bold mb-2 text-pluto-purple">Connectivity Gap</h3>
+                        <p class="text-gray-600">60% of rural households lack internet connectivity.</p>
+                    </div>
+                </div>
+                <div class="bg-pluto-purple text-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Untapped Potential</h3>
+                    <p class="mb-6">Without early digital exposure, innovation and potential remain untapped.</p>
+                    <img data-src="./asset/communityImg.jpg" alt="Challenge" 
+                         class="rounded-lg w-full h-48 object-cover border border-pluto-teal/30 lazy"
+                         loading="lazy" width="800" height="450">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunity Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-pluto-purple mb-12 text-center">The Opportunity</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <p class="mb-6 text-lg text-gray-700">
+                    Ghana's youth has a median age of 20.7, and are eager to learn and innovate. Digital skills can unlock careers in freelancing, e-commerce, and app development. But first the youth have to be nudged into curiosity.
+                </p>
+                <div class="bg-pluto-purple text-white p-8 rounded-xl shadow-md">
+                    <p class="italic">
+                        "Curiosity is a crucial driver for innovation because it fuels the desire to explore, question, and seek new solutions, leading to the development of novel ideas and breakthroughs."
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="bg-pluto-teal/10 p-8 rounded-xl border-l-4 border-pluto-teal">
+                    <h3 class="text-xl font-bold mb-4 text-pluto-purple">Local Solutions</h3>
+                    <p class="text-gray-700">
+                        Local challenges like farming and waste management can be solved with technology, if curiosity in tech is ignited.
+                    </p>
+                    <img data-src="./asset/farm.jpg" 
+                         alt="photorealistic-woman-organic-sustainable-garden-harvesting-produce" 
+                         class="mt-4 rounded-lg w-full h-48 object-cover lazy"
+                         loading="lazy" width="800" height="450">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Edition Section -->
+    <section class="py-16 px-4 bg-pluto-purple text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Pilot Edition @ Prampram</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-pluto-teal">Why Prampram?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            A representative coastal community with limited digital access
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            A community rich in culture, ready to embrace innovation
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            A scalable model for replication in Ho, Tamale, and beyond
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img data-src="./asset/images/pict_large.jpg" alt="Prampram" 
+                         class="rounded-lg shadow-lg w-full h-64 object-cover border border-pluto-teal/30 lazy"
+                         loading="lazy" width="800" height="450">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-pluto-teal">Tech Activities</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Tricycle Tech Showcase
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Drone Selfies & Delivery Simulations
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Solar Charging Station (Learn & Charge Your Devices)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Hands-on Coding with Tablets (Scratch for Kids)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Computer assembling
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            VR Tours of Global Tech Hubs
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Photo & Video Editing Basics
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-pluto-teal">Non-Tech Fun</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Traditional Games & Storytelling
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Art & Craft
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Food Bazaar Supporting Local Vendors
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-pluto-purple mb-12 text-center">Impact & Sustainability</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-pluto-purple">
+                <h3 class="text-xl font-bold mb-6 text-pluto-purple">Short-Term (2025)</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Replicate in 2 more communities (Ho & Tamale)
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Train 100+ youth in digital skills
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Inspire 50% of attendees to pursue tech careers
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        10 trained tech ambassadors to sustain activities
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-pluto-teal">
+                <h3 class="text-xl font-bold mb-6 text-pluto-purple">Long-Term (2027)</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Replicate in 10 communities
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Train 500+ Tech Ambassadors nationwide
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pluto-teal mr-2">•</span>
+                        Tech hubs emerging in rural areas
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suport Section -->
+    <section id="donate" class="py-16 px-4 bg-pluto-light">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-pluto-purple mb-12 text-center">How You Can Support</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-pluto-purple">Sponsor a Gadget</h3>
+                    <p class="mb-6 text-gray-700">Help us equip the event with essential technology:</p>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Tablets/Phones
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            VR headsets
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Drones
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pluto-teal mr-2">•</span>
+                            Projectors
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-pluto-purple text-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-6 text-pluto-teal">Donate</h3>
+                    <p class="mb-6">Every contribution brings digital access to more communities</p>
+                    <a href="https://wa.me/233256364076?text=Hello,%20I%20want%20to%20support%20the%20Digital%20Community%20Fair.%20I%20am%20interested%20in%20donating:%0A- [ ] Gadgets%0A- [ ] Personnel%0A- [ ] Money%0APlease%20let%20me%20know%20the%20next%20steps." target="_blank">
+                    <button class="bg-pluto-teal text-pluto-purple font-bold px-8 py-3 rounded-full hover:bg-opacity-90 transition">
+                        Make a Donation
+                    </button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lazy loading script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lazy load images
+            const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.add("loaded");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.add("loaded");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
